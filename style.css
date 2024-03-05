@@ -1,0 +1,16 @@
+
+/* 30e849 green color */
+
+/* General */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(./assets/cinema.jpg);
+    background-size: cover;
+    position: absolute;
+}
