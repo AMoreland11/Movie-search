@@ -9,8 +9,129 @@
     box-sizing: border-box;
 }
 
-body {
+html {
     background-image: url(./assets/cinema.jpg);
     background-size: cover;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    transition: all 500ms ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    color: white;
+}
+
+a {
+    color: inherit;
+}
+
+
+/* Nav Bar */
+
+#nav__bar {
+    max-width: 1920px;
+    max-height: auto;      
+}
+
+.container {
+    width: 100%;
+    padding: 1.5rem;
+    margin: auto;   
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__lists{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    list-style: none;
+    margin-right: 3rem;
+}
+
+.nav__lord-icon{
+    width: 75px;
+    height: 75px;
+    margin-left: 4rem;
+}
+
+.fa-house {
+   scale: 1.5;
+}
+
+.nav__home {
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+
+.nav__home:hover {
+    transform: scale(1.25);
+    color: white;
+    pointer-events: none;
+}
+
+.nav__sign-up,
+.nav__log-in {
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: 3px;
+}
+
+.nav__sign-up:after,
+.nav__log-in:after {
+    content: "";
     position: absolute;
+    height: 3px;
+    width: 0;
+    bottom: -3px;
+    right: 0;
+    transition: all 300ms ease;
+}
+
+
+.nav__sign-up:hover:after,
+.nav__log-in:hover:after {
+    width: 100%;
+    left: 0;
+    background-color: white;
+}
+
+
+/* Search Bar */
+
+
+#search {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+.search__bar {
+    width: 500px;
+    height: 50px;
+    border-radius: 2rem;
+}
+
+input {
+    text-align: center;
+}
+
+
+.search__lord-icon {
+    display: flex;
+    text-align: center;
+    margin-right: 1rem;
+    width: 50px;
+    height: 50px;
 }

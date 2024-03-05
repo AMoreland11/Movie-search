@@ -9,34 +9,35 @@
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
 </head>
 <body>
-    <header class="container">
-        <div class="row">
-            <div class="nav">
-                <div class="nav__logo">
-                    <lord-icon
-                        src="https://cdn.lordicon.com/disqayiz.json"
-                        trigger="hover">
-                    </lord-icon>
+    <section id="nav__bar">
+        <div class="container">
+            <div class="row">
+                <div class="nav">
+                    <div class="nav__logo">
+                        <a href="index.html">
+                            <lord-icon class="nav__lord-icon"
+                                src="https://cdn.lordicon.com/disqayiz.json"
+                                trigger="hover">
+                            </lord-icon>
+                        </a>
+                    </div>
+                    <ul class="nav__lists">
+                        <li class="nav__home"><a href="index.html"><i class="fa-solid fa-house"></i></a>
+                        </li>
+                        <button class="nav__sign-up">Sign up</li>
+                        <button class="nav__log-in">Log in</li>
+                    </ul>
                 </div>
-                <ul class="nav__lists">
-                    <li class="nav__list"><lord-icon class="home_icon"
-                        src="https://cdn.lordicon.com/laqlvddb.json"
-                        trigger="hover"
-                        stroke="light">
-                    </lord-icon></li>
-                    <li class="nav__list">Sign up</li>
-                    <li class="nav__list">Log in</li>
-                </ul>
             </div>
         </div>
-    </header>
-    <div class="search">
-        <input class="nav__list" placeholder="Search">
-        <lord-icon
-            src="https://cdn.lordicon.com/unukghxb.json"
-            trigger="hover"
-            style="width:30px;height:30px">
+    </section>
+    <div id="search">
+        <a href="#"><lord-icon class="search__lord-icon"
+        src="https://cdn.lordicon.com/unukghxb.json"
+        trigger="hover">
         </lord-icon>
+        </a>
+        <input class="search__bar" placeholder="Search">
     </div>
     <section class="carousel">
         <div class="container">
