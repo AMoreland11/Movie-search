@@ -30,7 +30,7 @@ function displayMovieList(movies) {
     let movieListItem = document.createElement('div');
     movieListItem.dataset.id = movies[i].imdbID;
     movieListItem.classList.add('search__list-item');
-    if (movies[i].Poster != "N/A") 
+    if (movies[i].Poster !== "N/A") 
         moviePoster = movies[i].Poster;
     else 
         moviePoster = "image_not_found.png";
@@ -46,10 +46,10 @@ function displayMovieList(movies) {
     `;
     searchList.appendChild(movieListItem);
   }
-  loadMoviesDetails();
+  loadMovieDetails();
 }
 
-function loadMoviesDetails() {
+function loadMovieDetails() {
   const searchListMovies = searchList.querySelectorAll('.search__list-item');
   searchListMovies.forEach((movie) => {
     movie.addEventListener('click', async () => {
@@ -66,7 +66,7 @@ function loadMoviesDetails() {
 function displayMovieDetails(details) {
     resultGrid.innerHTML = `
     <div class="movie__poster">
-        <img src="${details.Poster != "N/A"}" alt="movie poster">
+        <img src= "${details.Poster !== "N/A"}" alt="movie poster">
     </div>
     <div class="movie__info">
         <h3 class="movie__title">
