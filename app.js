@@ -31,9 +31,9 @@ function displayMovieList(movies) {
     movieListItem.dataset.id = movies[i].imdbID;
     movieListItem.classList.add('search__list-item');
     if (movies[i].Poster !== "N/A") 
-        moviePoster = movies[i].Poster;
+      moviePoster = movies[i].Poster;
     else 
-        moviePoster = "image_not_found.png";
+      moviePoster = "image_not_found.png";
 
     movieListItem.innerHTML = `
     <div class="search__item-thumbnail">
@@ -51,12 +51,11 @@ function displayMovieList(movies) {
 
 function loadMovieDetails() {
   const searchListMovies = searchList.querySelectorAll('.search__list-item');
-  searchListMovies.forEach((movie) => {
+  searchListMovies.forEach(movie => {
     movie.addEventListener('click', async () => {
       searchList.classList.add('hide__search-list');
       movieSearchBox.value = "";
-      const result = await fetch(
-        `http://www.omdbapi.com/?i=${movie.dataset.id}&apikey=9a8004ec`);
+      const result = await fetch(`http://www.omdbapi.com/?i=${movie.dataset.id}&apikey=9a8004ec`);
       const movieDetails = await result.json();
       displayMovieDetails(movieDetails);
     });
