@@ -86,3 +86,10 @@ function displayMovieDetails(details) {
     </div>
     `;
 }
+
+
+window.addEventListener('click', (event) => {
+  if(event.target.className !== "form__control"){
+    searchList.classList.add('hide__search-list');
+  }
+});
