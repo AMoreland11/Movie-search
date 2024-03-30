@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,22 +9,22 @@
     <script src="https://kit.fontawesome.com/bf78b2bfdd.js" crossorigin="anonymous"></script>
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
 </head>
+
 <body>
     <section id="nav__bar">
-        <div class="container">
+        <div class="nav__container">
             <div class="row">
                 <div class="nav">
                     <div class="nav__logo">
                         <a href="index.html">
-                            <lord-icon class="nav__lord-icon"
-                                src="https://cdn.lordicon.com/disqayiz.json"
+                            <lord-icon class="nav__lord-icon" src="https://cdn.lordicon.com/disqayiz.json"
                                 trigger="hover">
                             </lord-icon>
                         </a>
                     </div>
                     <ul class="nav__lists">
-                        <li class="nav__home"><a href="index.html"><i class="fa-solid fa-house"></i></a>
-                        </li>
+                        <div class="nav__home"><a href="index.html"><i class="fa-solid fa-house"></i></a>
+                        </div>
                         <button class="nav__sign-up">Sign up</li>
                         <button class="nav__log-in">Log in</li>
                     </ul>
@@ -31,21 +32,51 @@
             </div>
         </div>
     </section>
-    <div id="search">
-        <a href="#"><lord-icon class="search__lord-icon"
-        src="https://cdn.lordicon.com/unukghxb.json"
-        trigger="hover">
-        </lord-icon>
-        </a>
-        <input class="search__bar" placeholder="Search">
-    </div>
-    <section class="carousel">
-        <div class="container">
-            <div class="row">
-
+    <div class="search__container">
+        <div class="search__element">
+            <input type="text" class="search__bar" class="form__control" placeholder="Search Movie Title" id="movie__search-box" onkeyup="findMovies()">
+            <div class="search__list" id="search__list">
+                <!-- <div class="search__list-item">
+                    <div class="search__item-thumbnail">
+                        <img src="./assets/medium-cover.jpg">
+                    </div>
+                    <div class="search__item-info">
+                        <h3>Guardians of the Galaxy Vol.2</h3>
+                        <p>2017</p>
+                    </div>
+                </div> -->
             </div>
         </div>
-    </section>
+    </div>
+    <div class="container">
+        <div class="result__container">
+            <div class="result_grid" id="result__grid">
+                <!-- <div class="movie__poster">
+                    <img src="./assets/medium-cover.jpg" alt="movie poster">
+                </div>
+                <div class="movie__info">
+                    <h3 class="movie__title">
+                        Guardians of the Galaxy Vol. 2
+                    </h3>
+                    <ul class="movie__msc-info">
+                        <li class="year">Year: 2017</li>
+                        <li class="rated">Ratings: PG-13</li>
+                        <li class="released">Released: 05 May 2017</li>
+                    </ul>
+                    <p class="genre"><b>Genre:</b> Action, Adventure, Comedy</p>
+                    <p class="writer"><b>Writer:</b> James Gunn, Don Abnett, Andy Lanning</p>
+                    <p class="actors"><b>Actors:</b>Chris Pratt, Zoe Saldana, Dave Bautista</p>
+                    <p class="plots"><b>Plot:</b> The Guardians struggle to keep together as a team while dealing with
+                        their personal family issues, notably Star-Lord'd encounter with his father the ambitious
+                        celestial being Ego.
+                    </p>
+                    <p class="language"><b>Language:</b> English</p>
+                    <p class="awards"><i class="fa-solid fa-award"></i><b> Nominated for 1 Oscar</b></p>
+                </div> -->
+            </div>
+        </div>
+    </div>
 </body>
 <script src="./app.js"></script>
+
 </html>
