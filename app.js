@@ -15,12 +15,12 @@ async function loadMovies(searchTerm) {
 }
 
 function findMovies() {
-  let searchTerm = movieSearchBox.value.trim();
+  let searchTerm = (movieSearchBox.value).trim();
   if (searchTerm.length > 0) {
-    searchList.classList.remove("hide__search-list");
+    searchList.classList.remove('hide__search-list');
     loadMovies(searchTerm);
   } else {
-    searchList.classList.add("hide__search-list");
+    searchList.classList.add('hide__search-list');
   }
 }
 
@@ -37,11 +37,11 @@ function displayMovieList(movies) {
 
     movieListItem.innerHTML = `
     <div class="search__item-thumbnail">
-        <img src="${moviePoster}">
+      <img src = "${moviePoster}">
     </div>
-    <div class="search__item-info">
-        <h3>${movies[i].Title}</h3>
-        <p>${movies[i].Year}</p>
+    <div class = "search__item-info">
+      <h3>${movies[i].Title}</h3>
+      <p>${movies[i].Year}</p>
     </div>
     `;
     searchList.appendChild(movieListItem);
@@ -66,16 +66,16 @@ function loadMovieDetails() {
 function displayMovieDetails(details) {
     resultGrid.innerHTML = `
     <div class="movie__poster">
-        <img src= "${details.Poster !== "N/A"}" alt="movie poster">
+      <img src= "${(details.Poster !== "N/A") ? details.Poster : "image_not_found.png"}" alt="movie poster">
     </div>
     <div class="movie__info">
         <h3 class="movie__title">
-            ${details.Title}
+          ${details.Title}
         </h3>
         <ul class="movie__msc-info">
-            <li class="year">${details.Year}</li>
-            <li class="rated">${details.Rated}</li>
-            <li class="released">Released:${details.Released}</li>
+          <li class="year">${details.Year}</li>
+          <li class="rated">${details.Rated}</li>
+          <li class="released">${details.Released}</li>
         </ul>
         <p class="genre"><b>Genre:</b> ${details.Genre}</p>
         <p class="writer"><b>Writer:</b> ${details.Writer}</p>
