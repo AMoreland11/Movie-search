@@ -338,7 +338,7 @@ input {
     margin: 1rem 0.7rem 0 0;
 }
 
-@media(max-width: 400px){
+@media(max-width: 425px){
     button {
         display: none;
     }
